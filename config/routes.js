@@ -47,11 +47,6 @@ module.exports.routes = {
     'get /api/data': 'DispatchController.fetch_data',
     
     'post /api/Metadata': 'DispatchController.fetch_metadata',
-    'get /api/Metadata': 'DispatchController.fetch_metadata',
+    'get /api/Metadata': 'DispatchController.fetch_metadata'
         
-    'post /api/login': 'DispatchController.dispatch',
-    'post /api/logout': 'DispatchController.dispatch',
-
-    'get /api/config/data': 'DispatchController.dispatch',
-
 };
