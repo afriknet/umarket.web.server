@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>umarket.web.srv</Name>
+    <RootNamespace>umarket.web.srv.v2</RootNamespace>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <SccProjectName>
+    </SccProjectName>
+    <SccProvider>
+    </SccProvider>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d69601fb-2060-4e26-9ca8-b98fb8d47457</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Specifies the directories which are ignored. Any paths which contain these directory names
+      will be ignored. The directory name must completely match and no wild cards are allowed
+   -->
+    <AnalysisIgnoredDirectories>node_modules;dir_not_included</AnalysisIgnoredDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".editorconfig" />
+    <Content Include=".sailsrc" />
+    <Content Include="api\controllers\.gitkeep" />
+    <Content Include="api\models\.gitkeep" />
+    <Content Include="api\services\.gitkeep" />
+    <Content Include="assets\favicon.ico" />
+    <Content Include="assets\images\.gitkeep" />
+    <Content Include="assets\robots.txt" />
+    <Content Include="assets\styles\importer.less" />
+    <Content Include="assets\templates\.gitkeep" />
+    <Content Include="config\locales\de.json" />
+    <Content Include="config\locales\en.json" />
+    <Content Include="config\locales\es.json" />
+    <Content Include="config\locales\fr.json" />
+    <Content Include="config\locales\_README.md" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="server\breeze_sequel\package.json" />
+    <Content Include="server\breeze_sequel\README.md" />
+    <Content Include="tasks\README.md" />
+    <Content Include="tsd.json" />
+    <Content Include="views\403.ejs" />
+    <Content Include="views\404.ejs" />
+    <Content Include="views\500.ejs" />
+    <Content Include="views\homepage.ejs" />
+    <Content Include="views\layout.ejs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="api\controllers\DispatchController.js" />
+    <Compile Include="api\policies\sessionAuth.js" />
+    <Compile Include="api\responses\badRequest.js" />
+    <Compile Include="api\responses\created.js" />
+    <Compile Include="api\responses\forbidden.js" />
+    <Compile Include="api\responses\notFound.js" />
+    <Compile Include="api\responses\ok.js" />
+    <Compile Include="api\responses\serverError.js" />
+    <Compile Include="app.js" />
+    <Compile Include="assets\js\dependencies\sails.io.js" />
+    <Compile Include="config\blueprints.js" />
+    <Compile Include="config\bootstrap.js" />
+    <Compile Include="config\connections.js" />
+    <Compile Include="config\cors.js" />
+    <Compile Include="config\csrf.js" />
+    <Compile Include="config\env\development.js" />
+    <Compile Include="config\env\production.js" />
+    <Compile Include="config\globals.js" />
+    <Compile Include="config\http.js" />
+    <Compile Include="config\i18n.js" />
+    <Compile Include="config\local.js" />
+    <Compile Include="config\log.js" />
+    <Compile Include="config\models.js" />
+    <Compile Include="config\policies.js" />
+    <Compile Include="config\routes.js" />
+    <Compile Include="config\session.js" />
+    <Compile Include="config\sockets.js" />
+    <Compile Include="config\views.js" />
+    <Compile Include="Gruntfile.js" />
+    <Compile Include="server\breeze_sequel\dbUtils.js" />
+    <Compile Include="server\breeze_sequel\main.js" />
+    <Compile Include="server\breeze_sequel\MetadataMapper.js" />
+    <Compile Include="server\breeze_sequel\SequelizeManager.js" />
+    <Compile Include="server\breeze_sequel\SequelizeQuery.json.js" />
+    <Compile Include="server\breeze_sequel\SequelizeSaveHandler.js" />
+    <Compile Include="server\breeze_sequel\sequelizeUtils.js" />
+    <Compile Include="server\breeze_sequel\utils.js" />
+    <Compile Include="server\init\meta.js" />
+    <Compile Include="tasks\config\clean.js" />
+    <Compile Include="tasks\config\coffee.js" />
+    <Compile Include="tasks\config\concat.js" />
+    <Compile Include="tasks\config\copy.js" />
+    <Compile Include="tasks\config\cssmin.js" />
+    <Compile Include="tasks\config\jst.js" />
+    <Compile Include="tasks\config\less.js" />
+    <Compile Include="tasks\config\sails-linker.js" />
+    <Compile Include="tasks\config\sync.js" />
+    <Compile Include="tasks\config\uglify.js" />
+    <Compile Include="tasks\config\watch.js" />
+    <Compile Include="tasks\pipeline.js" />
+    <Compile Include="tasks\register\build.js" />
+    <Compile Include="tasks\register\buildProd.js" />
+    <Compile Include="tasks\register\compileAssets.js" />
+    <Compile Include="tasks\register\default.js" />
+    <Compile Include="tasks\register\linkAssets.js" />
+    <Compile Include="tasks\register\linkAssetsBuild.js" />
+    <Compile Include="tasks\register\linkAssetsBuildProd.js" />
+    <Compile Include="tasks\register\prod.js" />
+    <Compile Include="tasks\register\syncAssets.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="api\" />
+    <Folder Include="api\controllers\" />
+    <Folder Include="api\models\" />
+    <Folder Include="api\policies\" />
+    <Folder Include="api\responses\" />
+    <Folder Include="api\services\" />
+    <Folder Include="assets\" />
+    <Folder Include="assets\images\" />
+    <Folder Include="assets\js\" />
+    <Folder Include="assets\js\dependencies\" />
+    <Folder Include="assets\styles\" />
+    <Folder Include="assets\templates\" />
+    <Folder Include="config\" />
+    <Folder Include="config\env\" />
+    <Folder Include="config\locales\" />
+    <Folder Include="server\" />
+    <Folder Include="server\apis\" />
+    <Folder Include="server\breeze_sequel\" />
+    <Folder Include="server\init\" />
+    <Folder Include="server\lib\" />
+    <Folder Include="server\local\" />
+    <Folder Include="server\models\" />
+    <Folder Include="tasks\" />
+    <Folder Include="tasks\config\" />
+    <Folder Include="tasks\register\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\breeze\" />
+    <Folder Include="typings\express\" />
+    <Folder Include="typings\formidable\" />
+    <Folder Include="typings\fs-extra\" />
+    <Folder Include="typings\lodash\" />
+    <Folder Include="typings\mime\" />
+    <Folder Include="typings\moment\" />
+    <Folder Include="typings\multer\" />
+    <Folder Include="typings\node\" />
+    <Folder Include="typings\q\" />
+    <Folder Include="typings\serve-static\" />
+    <Folder Include="typings\winston\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="api\controllers\itemcats_srv.ts" />
+    <TypeScriptCompile Include="api\controllers\item_srv.ts" />
+    <TypeScriptCompile Include="api\controllers\specsdim_srv.ts" />
+    <TypeScriptCompile Include="api\controllers\user_srv.ts" />
+    <TypeScriptCompile Include="api\models\itemcats_model.ts" />
+    <TypeScriptCompile Include="api\models\item_model.ts" />
+    <TypeScriptCompile Include="api\models\occp.ts" />
+    <TypeScriptCompile Include="api\models\prof.ts" />
+    <TypeScriptCompile Include="api\models\specsdim_model.ts" />
+    <TypeScriptCompile Include="api\models\user_model.ts" />
+    <TypeScriptCompile Include="server\appcontext.ts" />
+    <TypeScriptCompile Include="server\init\boot.ts" />
+    <TypeScriptCompile Include="server\dispatcher.ts" />
+    <TypeScriptCompile Include="server\init.ts" />
+    <TypeScriptCompile Include="server\lib\adapter.ts" />
+    <TypeScriptCompile Include="server\lib\dataservice.ts" />
+    <TypeScriptCompile Include="server\lib\fileupload.ts" />
+    <TypeScriptCompile Include="server\lib\serviceapi.ts" />
+    <TypeScriptCompile Include="server\lib\store.ts" />
+    <TypeScriptCompile Include="server\lib\types.ts" />
+    <TypeScriptCompile Include="server\lib\utils.ts" />
+    <TypeScriptCompile Include="server\local\localdb.ts" />
+    <TypeScriptCompile Include="typings\breeze\breeze.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\formidable\formidable.d.ts" />
+    <TypeScriptCompile Include="typings\fs-extra\fs-extra.d.ts" />
+    <TypeScriptCompile Include="typings\lodash\lodash.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\moment\moment-node.d.ts" />
+    <TypeScriptCompile Include="typings\moment\moment.d.ts" />
+    <TypeScriptCompile Include="typings\multer\multer.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\q\Q.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\winston\winston.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
