@@ -19,9 +19,9 @@ export function start_db(app: Express.Application) {
     
     var conn = new s_mgr(dbconn.config, dbconn.extra);
     
-    conn.sequelize.query("select top 10 * from occp", { type: squlize.QueryTypes.SELECT }).then(list => {
-        var d = list;
-    });
+    //conn.sequelize.query("select top 10 * from occp", { type: squlize.QueryTypes.SELECT }).then(list => {
+    //    var d = list;
+    //});
         
     return conn;
 }

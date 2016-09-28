@@ -10,9 +10,9 @@ var Con = require(root('/config/connections'));
 var dbconn = Con.connections.mssql_connection;
 function start_db(app) {
     var conn = new s_mgr(dbconn.config, dbconn.extra);
-    conn.sequelize.query("select top 10 * from occp", { type: squlize.QueryTypes.SELECT }).then(function (list) {
-        var d = list;
-    });
+    //conn.sequelize.query("select top 10 * from occp", { type: squlize.QueryTypes.SELECT }).then(list => {
+    //    var d = list;
+    //});
     return conn;
 }
 exports.start_db = start_db;
